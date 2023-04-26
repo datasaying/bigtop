@@ -24,6 +24,9 @@ if [ $HOSTTYPE = "powerpc64le" ] ; then
   sed -i "s|<nodeVersion>v10.9.0</nodeVersion>|<nodeVersion>v12.22.1</nodeVersion>|" flink-runtime-web/pom.xml
 fi
 
+sed -i "s|<nodeVersion>v16.13.2</nodeVersion>|<nodeVersion>v12.22.1</nodeVersion>|" flink-runtime-web/pom.xml
+sed -i "s|<npmVersion>8.1.2</npmVersion>|<npmVersion>6.14.12</npmVersion>|" flink-runtime-web/pom.xml
+
 # husky have to be executed from the path that .git exists
 git_path="$(cd $(dirname $0)/../../../.. && pwd)"
 cmd_from="cd ../.. && husky install flink-runtime-web/web-dashboard/.husky"

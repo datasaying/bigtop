@@ -41,8 +41,8 @@
      'scala' { version = '2.10.4'; version_base = version }
    }
    apache { // *required* These shoudn't be modified unless ASF Infra demands changes
-     APACHE_MIRROR = "https://apache.osuosl.org"
-     APACHE_ARCHIVE = "https://archive.apache.org/dist"
+     APACHE_MIRROR = "https://repo.huaweicloud.com/apache"
+     APACHE_ARCHIVE = "https://mirrors.aliyun.com/apache"
    }
    git { // *optional* This is a global setting to access protected git repositories,
          //            can be specified per component as well
@@ -100,8 +100,8 @@ bigtop {
     'scala' { version = '2.12.13'; version_base = version }
   }
   apache {
-    APACHE_MIRROR = "https://apache.osuosl.org"
-    APACHE_ARCHIVE = "https://archive.apache.org/dist"
+    APACHE_MIRROR = "https://repo.huaweicloud.com/apache"
+    APACHE_ARCHIVE = "https://mirrors.aliyun.com/apache"
   }
 /** End of Base Configuration */
 
@@ -270,7 +270,7 @@ bigtop {
       version { base = bigtop.version; pkg = base-"-SNAPSHOT"; release = 1 }
       tarball { destination = "bigtop-utils-${version.base}.tar.gz" }
     }
-/*
+
     'bigtop-select' {
       name    = "bigtop-select"
       relNotes = "Service package for Apache Bigtop information to use Ambari"
@@ -278,7 +278,7 @@ bigtop {
       tarball { destination = "bigtop-select-${version.base}.tar.gz" }
       packaging = 'rpm'
     }
-*/
+
     'bigtop-jsvc' {
       name    = "bigtop-jsvc"
       relNotes = "Apache Common Daemon (jsvc) service package"

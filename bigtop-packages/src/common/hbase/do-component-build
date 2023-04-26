@@ -50,7 +50,7 @@ if [ $HOSTTYPE = "aarch64" ] ; then
 '\             <version>9.1.8.0</version>\n'\
 '\          <\/dependency>' pom.xml
   mvn install:install-file -DgroupId=com.google.protobuf -DartifactId=protoc -Dversion=2.5.0 \
-      -Dclassifier=linux-aarch_64 -Dpackaging=exe -Dfile=/usr/local/protobuf-2.5.0/bin/protoc
+      -Dclassifier=linux-aarch_64 -Dpackaging=exe -Dfile=/bin/protoc
   MVN_ARGS+="-Dexternal.protobuf.groupid=com.google.protobuf -Dexternal.protoc.version=2.5.0 "
 fi
 

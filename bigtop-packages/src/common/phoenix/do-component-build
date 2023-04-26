@@ -29,7 +29,7 @@ if [ $HOSTTYPE = "powerpc64le" ] ; then
   MVN_ARGS+="-Dprotobuf.group=com.google.protobuf -Dprotoc.version=2.5.0 "
 elif [ $HOSTTYPE = "aarch64" ] ; then
   mvn install:install-file -DgroupId=com.google.protobuf -DartifactId=protoc -Dversion=2.5.0 \
-            -Dclassifier=linux-aarch_64 -Dpackaging=exe -Dfile=/usr/local/protobuf-2.5.0/bin/protoc
+            -Dclassifier=linux-aarch_64 -Dpackaging=exe -Dfile=/bin/protoc
   MVN_ARGS+="-Dprotobuf.group=com.google.protobuf -Dprotoc.version=2.5.0 "
 fi
 

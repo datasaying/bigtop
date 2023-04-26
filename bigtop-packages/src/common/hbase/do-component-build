@@ -61,5 +61,6 @@ mvn ${MVN_ARGS} ${MAVEN_ADDITIONAL} package assembly:single "$@"
 
 rm -rf build
 mkdir build
+cp hbase-assembly/target/hbase-${HBASE_VERSION}-bin.tar.gz output/
 tar -C build --strip-components=1 -xzf hbase-assembly/target/hbase-${HBASE_VERSION}-bin.tar.gz
 tar -C build --strip-components=1 -xzf hbase-assembly/target/hbase-${HBASE_VERSION}-client-bin.tar.gz

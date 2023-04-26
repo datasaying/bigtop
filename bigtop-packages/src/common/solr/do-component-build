@@ -18,7 +18,7 @@ set -ex
 
 . `dirname $0`/bigtop.bom
 
-IVY_MIRROR_PROP=${IVY_MIRROR_PROP:-https://repo1.maven.org/maven2}
+IVY_MIRROR_PROP=${IVY_MIRROR_PROP:-https://mirrors.huaweicloud.com/repository/maven/}
 BUILD_OPTS="-Dversion=${FULL_VERSION} -Dhadoop.version=${HADOOP_VERSION} \
             -Dexclude.from.war=nothing   \
             -Divy.home=${HOME}/.ivy2 -Drepo.maven.org=$IVY_MIRROR_PROP \

@@ -18,6 +18,8 @@
 
 buildscript {
   repositories {
+    maven { name "huaweicloud" ; url 'https://mirrors.huaweicloud.com/repository/maven/'}
+    maven { name "Alibaba" ; url 'https://maven.aliyun.com/repository/public/' }
     mavenCentral()
   }
 }
@@ -157,6 +159,8 @@ allprojects {
   targetCompatibility = langLevel
 
   repositories {
+    maven { name "huaweicloud" ; url 'https://mirrors.huaweicloud.com/repository/maven/'}
+    maven { name "Alibaba" ; url 'https://maven.aliyun.com/repository/public/' }
     mavenCentral()
   }
 }

@@ -18,6 +18,7 @@ set -xe
 
 . `dirname $0`/bigtop.bom
 
+sed -i "s|<allow-root-build>--allow-root=false</allow-root-build>|<allow-root-build>--allow-root=true</allow-root-build>|" tez-ui/pom.xml
 if [ $HOSTTYPE = "powerpc64le" ] ; then
   mvn install:install-file -DgroupId=com.google.protobuf -DartifactId=protoc -Dversion=2.5.0 \
       -Dclassifier=linux-ppcle_64 -Dpackaging=exe -Dfile=/usr/local/protobuf-2.5.0/bin/protoc

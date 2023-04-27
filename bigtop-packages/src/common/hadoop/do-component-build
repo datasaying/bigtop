@@ -135,7 +135,7 @@ MAVEN_OPTS+="-DskipTests -DskipITs "
 mvn $BUNDLE_SNAPPY -Pdist -Pnative -Psrc -Pyarn-ui -Dtar ${MAVEN_OPTS} install ${EXTRA_GOALS} "$@"
 mvn site site:stage ${MAVEN_OPTS} $@
 
-cp hadoop-dist/target/hadoop-${HADOOP_VERSION}.tar.gz output/
+cp hadoop-dist/target/hadoop-${HADOOP_VERSION}.tar.gz ../../../../../output/
 
 (cd build ; tar --strip-components=1 -xzvf  ../hadoop-dist/target/hadoop-${HADOOP_VERSION}.tar.gz)
 (cd build/src ; tar --strip-components=1 -xzvf  ../../hadoop-dist/target/hadoop-${HADOOP_VERSION}-src.tar.gz)

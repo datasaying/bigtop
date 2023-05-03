@@ -52,6 +52,13 @@ if [ $HOSTTYPE = "powerpc64le" ] ; then
   mvn install:install-file -DgroupId=io.grpc -DartifactId=protoc-gen-grpc-java -Dversion=1.28.0 -Dclassifier=linux-ppcle_64 -Dpackaging=exe -Dfile=/usr/src/grpc-java-1.28.0/compiler/build/exe/java_plugin/protoc-gen-grpc-java
 sed -i "s|<node.version>v12.3.1</node.version>|<node.version>v12.22.1</node.version>|" pom.xml
 sed -i "s|<npm.version>6.9.0</npm.version>|<npm.version>6.14.12</npm.version>|" pom.xml
+sed -i "s|<plugin.gitcommitid.useNativeGit>false</plugin.gitcommitid.useNativeGit>|<plugin.gitcommitid.useNativeGit>true</plugin.gitcommitid.useNativeGit>|" pom.xml
+sed -i "s|archive.apache.org/dist/spark|repo.huaweicloud.com/apache/spark|" spark/pom.xml
+sed -i "s|archive.apache.org/dist/spark|repo.huaweicloud.com/apache/spark|" rlang/pom.xml
+sed -i "s|archive.apache.org/dist/flink|repo.huaweicloud.com/apache/flink|" flink/flink-scala-parent/pom.xml
+
+
+
 
 fi
 
